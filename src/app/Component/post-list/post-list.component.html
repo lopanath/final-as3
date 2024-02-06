@@ -1,0 +1,40 @@
+
+<div class="container" style="width: 80%; margin: auto;">
+
+    <h1>Courses Blogs</h1>
+
+    <ng-container *ngFor="let data of Data">
+
+        <div class="news-container">
+
+            <div class="news-card">
+
+                <div>
+
+                    <img [src]="data.url" style="width:60%; height:100px;">
+
+                </div>
+
+                <div class="card-body">
+
+                <p class="card-text"><b> {{data.title}}</b></p>
+
+                <p class="card-text"> {{data.author}}</p>
+
+                </div>
+
+                <div class="news-buttons">
+
+                    <button class="btn btn-read" routerLink='/comment'>Add Comment</button>
+
+                    <button class="btn btn-detail" routerLink = '/detail/{{data.id}}'>Details</button>
+
+                </div>
+
+            </div>
+
+        </div>  
+
+    </ng-container>
+
+</div>
